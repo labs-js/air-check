@@ -1,0 +1,3 @@
+{ "symptoms":[ { "name":"cough", "intensity": "5" }, { "name":"sneezing", "instensity":"3" }], "location":{ "latitude":"-34","longitude":"-58" } }
+{ "symptoms":[ { "name":"shortness breath", "intensity": "5" }, { "name":"sneezing", "instensity":"5" }], "location":{ "latitude":"-30","longitude":"-40" } }
+{ "symptoms":[ { "name":"shortness breath", "intensity": "1" }, { "name":"sneezing", "instensity":"1" }], "location":{ "latitude":"-35","longitude":"-40" } },
