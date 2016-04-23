@@ -12,19 +12,19 @@
 <!--test socket io-->
 <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 <script>
-    var socket = io('http://localhost:3000');
-
-    socket.on('news', function (data) {
-        console.log(data);
-        socket.emit('my other event', { my: 'data' });
-    });
-
-    socket.on('alert',function(data){
-        for (var i = 0; i < data.length; i++) {
-            var disease = data[i];
-            console.log(disease.name)
-        }
-    })
+//    var socket = io('http://localhost:3000');
+//
+//    socket.on('news', function (data) {
+//        console.log(data);
+//        socket.emit('my other event', { my: 'data' });
+//    });
+//
+//    socket.on('alert',function(data){
+//        for (var i = 0; i < data.length; i++) {
+//            var disease = data[i];
+//            console.log(disease.name)
+//        }
+//    })
 </script>
 
 </body>
