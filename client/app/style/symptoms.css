@@ -1,0 +1,14 @@
+.symptomContainer{
+    padding:10px;
+}
+
+.symptoms {
+    background-color: #ffffff;
+    border-top: 40px;
+    border-color: #4EC2F6;
+}
+
+.symptomButton {
+    margin: 10px;
+    background-color: #4EC2F6;
+}
