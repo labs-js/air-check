@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Air Check</title>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
@@ -10,25 +10,21 @@
     <link rel="stylesheet" href="app/style/dashboard.css">
 
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-        function initialize() {
-            var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+
 </head>
 <body>
-<div class="layout container">
+<div class="container">
     <div id="dashboard">
         <div id="header">
-            <div id="date" class="roboto-bold">Sunday 24 April</div>
-            <div id="location">Palermo, Buenos Aires, ARG</div>
-            <div id="last-update">Last update: 5 hours ago</div>
+            <div class="user-bar">
+                <div class="icon col-xs-6">
+                    <img class="img" src="app/style/images/dashboard/mockup1-07.png">
+                </div>
+                <div class="name col-xs-6">Apolo</div>
+            </div>
+            <div class="date header-data">Sunday 24 April</div>
+            <div class="location header-data">Palermo, Buenos Aires, ARG</div>
+            <div class="last-update header-data">Last update: 5 hours ago</div>
         </div>
         <div id="body">
             <div id="system-info">
@@ -38,30 +34,37 @@
                             <img class="img" src="app/style/images/dashboard/mockup1-08.png">
                         </div>
                         <div class="info">
-                            <div class="label info ">Air</div>
-                            <div class="value info">+ 20 PPM</div>
+                            <div class="label">Air</div>
+                            <div class="value">+ 20 PPM</div>
                         </div>
                     </div>
                     <div id="humedity" class="col-xs-3 parameter">
                         <div class="icon">
                             <img class="img" src="app/style/images/dashboard/mockup1-10.png">
                         </div>
-                        <div class="label">Humedity</div>
-                        <div class="value">30%</div>
+                        <div class="info">
+                            <div class="label">Humedity</div>
+                            <div class="value">30%</div>
+                        </div>
                     </div>
                     <div id="polution" class="col-xs-3 parameter">
                         <div class="icon">
                             <img class="img" src="app/style/images/dashboard/mockup1-11.png">
                         </div>
-                        <div class="label info">Polution</div>
-                        <div class="value info">30%</div>
+                        <div class="info">
+                            <div class="label">Polution</div>
+                            <div class="value">30%</div>
+                        </div>
                     </div>
                     <div id="wind" class="col-xs-3 parameter">
                         <div class="icon">
                             <img class="img" src="app/style/images/dashboard/mockup1-13.png">
                         </div>
-                        <div class="label info">Wind</div>
-                        <div class="value info">30</div>
+                        <div class="info">
+                            <div class="label">Wind</div>
+                            <div class="value">30</div>
+                        </div>
+
                     </div>
                 </div>
                 <div id="alerts"></div>
@@ -69,7 +72,7 @@
             <div id="community-info"></div>
         </div>
         <div id="footer">
-            <button id="report-symptoms">Report Symptoms</button>
+            <button class="report-symptoms">Report Symptoms</button>
         </div>
     </div>
 </div>
