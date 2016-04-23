@@ -3,11 +3,12 @@
     src: url(RobotoSlab-light.ttff);
 }
 
-.symptomContainer{
-    padding:10px;
+.symptomContainer {
+    padding: 10px;
 }
 
 .symptoms {
+    height:100%;
     background-color: #ffffff;
     border-top: 40px;
     border-color: #4EC2F6;
@@ -17,7 +18,9 @@
     margin: 10px;
     background-color: #4EC2F6;
 }
-.detail{
 
-
+.detail {
+    font-family: roboto;
+    height: 50px;
+    font-size: 34px;
 }
