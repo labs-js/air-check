@@ -7,7 +7,7 @@ import Flights from "./Flights/Flights";
 import Symptoms from "./Symptoms/Symptoms";
 
 import Store from "../../stores/Store";
-import {getLocation} from "../../actions/Actions";
+import { getLocation } from "../../actions/Actions";
 
 export default class Dashboard extends React.Component {
     constructor() {
@@ -15,26 +15,22 @@ export default class Dashboard extends React.Component {
 
         this.state = {
             location: ""
-        }
+        };
     }
 
-    componentDidMount = function(){
+    componentDidMount() {
         getLocation();
-        Store.addChangeListener(this._onChange());
+        Store.on("change", this._onChange.bind(this));
     }
 
-    _onChange = function(){
-        console.log(this);
+    _onChange() {
         this.setState(Store.getLocation());
     }
 
     render() {
-        return (
-            < div >
-                < Location location={this.state.location} />
-            </ div >
-
-    )
-        ;
+        return ( < div >
+                <Location location={this.state.location}/>
+                </div>
+        );
     }
 }

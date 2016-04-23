@@ -1,9 +1,9 @@
 import { EventEmitter } from "events";
 
 import dispatcher from "../dispatcher";
-import {getLocation} from "../utils/Api"
+import {getLocation} from "../utils/Api";
 
-export default class Store extends EventEmitter {
+class Store extends EventEmitter {
     constructor() {
         super();
         this.location = "";
@@ -34,10 +34,8 @@ export default class Store extends EventEmitter {
                 break;
         }
     }
-
-
 }
 
-//const store = new Store;
-////dispatcher.register(store.handleActions.bind(store));
-//export default store;
+const store = new Store;
+dispatcher.register(store.handleActions.bind(store));
+export default store;
