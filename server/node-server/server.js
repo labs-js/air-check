@@ -4,8 +4,8 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io')(server);
 
-app.use(express.static('public'));
-app.use('/', express.static('public'));
+app.use(express.static('client'));
+app.use('/', express.static('client'));
 
 // Set up Routes for the application
 require('./routes/index.js')(app);
@@ -14,8 +14,8 @@ app.set('port', (process.env.PORT || 3000));
 
 
 server.listen(app.get('port'), function () {
-    console.log("Server started; listening on port " + app.get('port'));
-})
+    console.log("Server started listening on port " + app.get('port'));
+});
 
 io.on('connection', function (socket) {
 
