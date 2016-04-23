@@ -15,9 +15,9 @@ body {
     position: relative;
 }
 
-.symptoms {}
-
-.symptomButton {
-    width: 42px;
-    height: 42px;
+.symptoms {
+    background-color:#ffffff!important;
+    border-top:40px;
+    border-color: #4EC2F6;
 }
+
