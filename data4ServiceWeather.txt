@@ -1,0 +1,102 @@
+dato de uso de servicios de BLuemix  
+http://openweathermap.org/
+
+
+{
+   "alchemy_api": [
+      {
+         "name": "AlchemyAPI-v7",
+         "label": "alchemy_api",
+         "plan": "free",
+         "credentials": {
+            "url": "https://gateway-a.watsonplatform.net/calls",
+            "apikey": "df23b20b98cfd0f36d48756ece3b9ece5fd97844",
+            "note": "It may take up to 5 minutes for this key to become active"
+         }
+      }
+   ]
+}
+
+
+https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&return=enriched.url.url&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&enriched.url.taxonomy.taxonomy_.label=asthma&count=25&outputMode=json
+
+https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=asthma&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=africa&count=25&outputMode=json&timeSlice=1d
+
+
+https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=health%20and%20fitness&count=25&outputMode=json&timeSlice=1d
+
+disease
+allergies
+asthma
+cancer
+cold and flu
+epidemic
+headaches and migraines
+heart disease
+ibs and crohn´s disease
+incontinence
+infertility
+thyroid disease
+disorders
+panic and anxiety
+sleep disorders
+exercise
+----------------------------------------------
+
+{
+  "credentials": {
+    "username": "c2059120-c995-4dbf-baf8-9eb3210dbe78",
+    "password": "dXMApTai2H",
+    "host": "twcservice.mybluemix.net",
+    "port": 443,
+    "url": "https://c2059120-c995-4dbf-baf8-9eb3210dbe78:dXMApTai2H@twcservice.mybluemix.net"
+  }
+}
+
+
+
+
+https://c2059120-c995-4dbf-baf8-9eb3210dbe78:dXMApTai2H@twcservice.mybluemix.net:443/api/weather/v2/forecast/daily/10day?units=m&geocode=34.53%2C84.50&language=en-US
+
+https://c2059120-c995-4dbf-baf8-9eb3210dbe78:dXMApTai2H@twcservice.mybluemix.net:443/api/weather/v2/forecast/hourly/24hour?units=m&geocode=34.53%2C84.50&language=en-US
+
+https://c2059120-c995-4dbf-baf8-9eb3210dbe78:dXMApTai2H@twcservice.mybluemix.net:443/api/weather/v2/observations/current?units=m&geocode=34.53%2C84.50&language=en-US
+
+https://c2059120-c995-4dbf-baf8-9eb3210dbe78:dXMApTai2H@twcservice.mybluemix.net:443/api/weather/v2/observations/timeseries/24hour?units=m&geocode=34.53%2C84.50&language=en-US
+
+
+forecasts.temp
+"temp" (temperatura), 
+"rh" Humedad relativa,
+"uv" 
+
+
+"uv_desc"
+"uv_index"
+------------------------------------------
+
+
+
+units
+geocode
+language
+
+
+http://openweathermap.org/api_uv#uv_current
+
+f3768a12d28a660b9bd87afe5a73c0b5
+
+
+http://api.owm.io/air/1.0/uvi/current?lat={lat}&lon={lon}
+
+http://api.openweathermap.org/pollution/v1/co/{location}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
+
+http://api.openweathermap.org/pollution/v1/o3/{0.0,0.0}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
+
+
+[UV.data.value, ]  [<6]
+
+[CO.pressure]   [>0.00464 hPa] [<215 hPa ]
+
+[O3.data] [>100] [<500]
+
