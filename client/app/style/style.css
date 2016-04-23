@@ -9,6 +9,48 @@
 
 /* rojo: F3501D */
 
+@font-face {
+    font-family: roboto;
+    src: url('fonts/RobotoSlab-Light.ttf');
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url('fonts/RobotoSlab-Bold.ttf');
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url('fonts/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+    font-family: roboto-thin;
+    src: url('fonts/RobotoSlab-Thin.ttf');
+}
+
+@font-face {
+    font-family: sixcaps;
+    src: url('fonts/SixCaps.ttf');
+}
+
+.roboto-bold {
+    font-family: "roboto-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.roboto-regular {
+    font-family: "roboto-regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.roboto-thin {
+    font-family: "roboto-thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sixcaps{
+    font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 14px;
