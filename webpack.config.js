@@ -3,9 +3,9 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "/client"),
+    context: path.join(__dirname, "client/app"),
     devtool: debug ? "inline-sourcemap" : null,
-    entry: "./app/client.js",
+    entry: "./client.js",
     module: {
         loaders: [
             {
