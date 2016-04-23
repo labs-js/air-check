@@ -1,9 +1,23 @@
+
+/* celeste fondo: 4EC2F6 */
+/* azul iconos y textos: 0C46A0 */
+/* celeste tarjeta  de alerta: BADDFA */
+/* rojo: F3501D */
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 14px;
+    background-color: #4EC2F6;
     line-height: 34px;
     margin: 0 0 24px;
     text-align: justify;
     text-justify: inter-word;
     position: relative;
+}
+
+.symptoms {}
+
+.symptoms .symptomButton img {
+    width: 42px;
+    height: 42px;
 }
