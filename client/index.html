@@ -8,72 +8,44 @@
     <script src="libs/bootstrap.min.js"></script>
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="app/style/style.css">
-
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-        function initialize() {
-            var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
-
+    <link rel="stylesheet" href="app/style/symptoms.css">
 </head>
 
+
+<script>
+    $( document ).ready(function() {
+        function loadFirst() {
+            $('.container').load('dashboard.html', handleSecond);
+        }
+
+        function handleSecond() {
+            $('.report-symptoms').click(goSymptoms);
+            $('.go-map').click(goMap);
+        }
+
+        function goSymptoms () {
+            $('.container').load('symptoms.html', submitReport);
+        }
+
+        function goMap () {
+            $('.container').load('map.html', submitReport)
+        }
+
+        function submitReport () {
+            $('#submitSymptoms').click(function () {
+                $('.container').load('dashboard.html', loadFirst);
+            });
+        }
+
+        loadFirst();
+    });
+
+
+</script>
+
 <body>
-    <div id="app" class="container">
-        <div class="row" id="dashboard">
-           <div id="header">
-               <div id="date"></div>
-               <div id="location"></div>
-               <div id="last-update"></div>
-           </div>
-            <div id="body">
-                <div id="system-info">
-                    <div id="parameters"></div>
-                    <div id="alerts"></div>
-                </div>
-                <div id="community-info"></div>
-            </div>
-            <div id="footer">
-                <div id="report-symptoms"></div>
-            </div>
-        </div>
-
-        <div id="symptoms" class="symptoms">
-            <div class="symptomContainer">
-                <div class="row">
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-07.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-08.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-09.png"></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-10.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-11.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-12.png"></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-13.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-14.png"></div>
-                    <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-15.png"></div>
-                </div>
-            </div>
-
-            <input class="input"></input>
-        </div>
-
-        <div class="row col-md-offset-4" id="map">
-            <div id="googleMap" style="width:500px;height:380px;"></div>
-        </div>
-
-    </div>
+<div id="app" class="container">
     <script src="index.js"></script>
 </body>
 
 </html>
-                   
