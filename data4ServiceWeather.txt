@@ -2,6 +2,9 @@ dato de uso de servicios de BLuemix
 http://openweathermap.org/
 
 
+AlchemyData News
+developers can perform tasks such as extracting the people, places, companies, and other entities mentioned in a news article or analyze an image to understand the contents of the photo.
+
 {
    "alchemy_api": [
       {
@@ -42,6 +45,13 @@ panic and anxiety
 sleep disorders
 exercise
 ----------------------------------------------
+
+
+weather - 
+
+Este servicio le permite integrar datos sobre el tiempo históricos y en tiempo real desde The Weather Company a la aplicación IBM Bluemix. Puede recuperar datos del tiempo correspondientes a un área especificada por una geolocalización. Los datos le permiten pronosticar, detectar y visualizar eventos de tiempo negativos que pueden influir en la toma de decisiones de la aplicación.
+
+
 
 {
   "credentials": {
