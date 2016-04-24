@@ -46,10 +46,9 @@
     font-family: "roboto-thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.sixcaps{
+.sixcaps {
     font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
@@ -64,8 +63,8 @@ body {
 
 .container {
     width: 100%;
-    padding:0;
-    height:1600px;
+    padding: 0;
+    height: 1600px;
 }
 
 .reportButton {
@@ -82,3 +81,48 @@ body {
     margin-bottom: 21px;
 }
 
+.ui-slider-input {
+    display: none!important;
+}
+
+.mapData {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ui-slider-track .ui-btn.ui-slider-handle {
+    width: 50px;
+    height: 50px;
+    background-color: #0C46A0;
+    border-radius: 50%;
+    top: 0%;
+}
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active {
+    border-color: #4EC2F6;
+    background-color: #4EC2F6;
+}
+
+.ui-slider-track {
+    margin-left: 10px;
+}
+
+.ui-slider-input {
+    display: none!important;
+}
+
+.map-label {
+    font: roboto-regular;
+}
+
+.map-sym-img{
+    border: none;
+    height:40px;
+    width:40px;
+    background-color: #0C46A0;
+    margin-left:20px;
+    margin-top:5px;
+}
+.map-label-place{
+font-size:11px;
+}

@@ -19,148 +19,21 @@
             <div id="googleMap" style="height:380px;"></div>
         </div>
         <div>
-            <img id='map-symp-icon'><img>
+            <img id='map-symp-icon' src="app/style/images/sintomas/sintomas-10.png" class="map-sym-img"><img>
         </div>
-        <div id="map-symp-data">
-            <label id='map-place'></Label>
-            <label id='map-symptom'></Label>
+        <div id="map-symp-data" class="mapData">
+            <label id='map-place' class="map-label"></Label>
             <label>intencity</Label>
             <input type="range" name="slider" id="map-slider" value="0" min="0" max="100" data-highlight="true" />
         </div>
 
-        <div id='map-backbutton' class="reportButton">
+        <div id='map-backbutton' class="reportButton map-backbutton">
             BACK
         </div>
-
     </div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap"></script>
-    <script>
-        // Back button
-        $("#map-backbutton").click(function() {
-            alert("Volve!!!");
-        });
-        // SLIDER 
-        $(document).bind("pagecreate", function(event, ui) {
-            $('#map-slider').siblings('.ui-slider').bind('tap', function(event, ui) {
-                makeAjaxChange($(this).siblings('input'));
-            });
-            $('#map-slider').siblings('.ui-slider a').bind('taphold', function(event, ui) {
-                makeAjaxChange($(this).parent().siblings('input'));
-            });
-
-            function makeAjaxChange(elem) {
-                alert(elem.val());
-            }
-        });
-        $("#map-symp-data").css("display", "none");
-        // Note: This example requires that you consent to location sharing when
-        // prompted by your browser. If you see the error "The Geolocation service
-        // failed.", it means you probably did not give permission for the browser to
-        // locate you.
-        var markers = [];
-        var map;
-        var neighborhoods = [{
-            lat: 52.511,
-            lng: 13.447
-        }, {
-            lat: 52.549,
-            lng: 13.422
-        }, {
-            lat: 52.497,
-            lng: 13.396
-        }, {
-            lat: 52.517,
-            lng: 13.394
-        }];
-
-        function clearMarkers() {
-            for (var i = 0; i < markers.length; i++) {
-                markers[i].setMap(null);
-            }
-            markers = [];
-        }
-
-        function drawPoints() {
-            clearMarkers();
-            for (var i = 0; i < neighborhoods.length; i++) {
-                addMarkerWithTimeout(neighborhoods[i], i * 200);
-            }
-        }
-
-        function addMarkerWithTimeout(position, timeout) {
-            window.setTimeout(function() {
-                markers.push(new google.maps.Marker({
-                    position: position,
-                    map: map,
-                    animation: google.maps.Animation.DROP
-                }));
-            }, timeout);
-        }
-
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('googleMap'), {
-                center: {
-                    lat: -34.582796,
-                    lng: -58.4366897
-                },
-                zoom: 15
-            });
-            var icon = "../client/app/style/images/mapa/report.png"
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(-34.583796, -58.434),
-                title: "Reported Symptom!",
-                symptom: "headache",
-                namePlace: "Palermo",
-                icon: icon
-            });
-
-            var marker2 = new google.maps.Marker({
-                position: new google.maps.LatLng(-34.580924, -58.44097),
-                title: "Reported Symptom!",
-                symptom: "headache",
-                namePlace: "Palermo",
-                icon: icon
-            });
-
-            var marker3 = new google.maps.Marker({
-                position: new google.maps.LatLng(-34.582796, -58.4397),
-                title: "Reported Symptom!",
-                symptom: "vision",
-                namePlace: "Palermo",
-                icon: icon
-            });
-
-
-            // To add the marker to the map, call setMap();
-            marker.setMap(map);
-            marker2.setMap(map);
-            marker3.setMap(map);
-            marker.addListener('click', setSymptomData)
-            marker2.addListener('click', setSymptomData)
-            marker3.addListener('click', setSymptomData)
-            var infoWindow = new google.maps.InfoWindow({
-                map: map
-            });
-
-        }
-
-        function setSymptomData() {
-            $("#map-symp-data").css("display", "block");
-            $("#map-symptom").text(this.symptom);
-            $("#map-place").text(this.namePlace);
-        }
-
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-            infoWindow.setPosition(pos);
-            infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-        }
-        $(document).ready(function() {
-            drawPoints();
-        });
-    </script>
+    <script src="map.js"></script>
     <!--<script async defer-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap"></script>
     <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap"></script>-->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap" async defer></script>-->
 </body>
