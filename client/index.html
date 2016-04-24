@@ -24,6 +24,7 @@
 
         function dashboard() {
             $('.container').hide();
+            $('.map').hide();
             $('.main-dashboard').show();
         }
 
@@ -32,6 +33,10 @@
         $('.go-map').click(goMap);
 
         $('#submitSymptoms').click(function () {
+            dashboard();
+        });
+
+        $("#map-backbutton").click(function() {
             dashboard();
         });
 
@@ -45,17 +50,24 @@
             dashboard();
         });
 
+        // Back button
+        $("#alerts").click(function() {
+            goMap();
+        });
+
         function goSymptoms () {
             $('.container').hide();
+            $('.map').hide();
             $('.main-symptoms').show();
         }
 
         function goMap () {
             $('.container').hide();
-            $('.main-map').show();
+            $('.map').show();
         }
 
         $('.container').hide();
+        $('.map').hide();
         $('.main-dashboard').show();
     });
 
@@ -184,7 +196,9 @@
     <div id="submitSymptoms" class="reportButton">
         Send my Symptoms
     </div>
-</div>
+
+
+
 
 
 <script src="symptoms.js"></script>
