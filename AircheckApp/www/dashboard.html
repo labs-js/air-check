@@ -1,70 +1,23 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+
+
     <title>Air Check</title>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
-    <script src="libs/jquery.mobile-1.4.5.min.js"></script>
-
-
-
     <link rel="stylesheet" href="libs/bootstrap.min.css">
-    <link rel="stylesheet" href="app/style/dashboard.css">
     <link rel="stylesheet" href="app/style/style.css">
-    <link rel="stylesheet" href="app/style/symptoms.css">
-    <link rel="stylesheet" href="app/style/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="app/style/dashboard.css">
+
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
 </head>
-
-
-<script>
-    $( document ).ready(function() {
-
-        function dashboard() {
-            $('.container').hide();
-            $('.main-dashboard').show();
-        }
-
-        $('.report-symptoms').click(goSymptoms);
-
-        $('.go-map').click(goMap);
-
-        $('#submitSymptoms').click(function () {
-            dashboard();
-        });
-
-        // save button
-        $("#submitSymptoms").click(function() {
-            dashboard();
-        });
-
-        // Back button
-        $("#backButton").click(function() {
-            dashboard();
-        });
-
-        function goSymptoms () {
-            $('.container').hide();
-            $('.main-symptoms').show();
-        }
-
-        function goMap () {
-            $('.container').hide();
-            $('.main-map').show();
-        }
-
-        $('.container').hide();
-        $('.main-dashboard').show();
-    });
-
-
-</script>
-
 <body>
-
-<div class="container main-dashboard">
+<div class="container">
     <div id="dashboard">
         <div id="header">
             <div class="user-bar">
@@ -146,49 +99,10 @@
             </div>
         </div>
         <div id="footer">
-            <button class="report-symptoms">I have Symptoms</button>
+            <button class="report-symptoms">Report Symptoms</button>
         </div>
     </div>
 </div>
-
-<div class="container main-symptoms">
-    <div class="backRow">
-        <img id="backButton" src="app/style/images/atras.png">
-    </div>
-    <div id="symptoms" class="symptoms">
-        <div class="symptomContainer">
-            <div class="row">
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-07.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-08.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-09.png"></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-10.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-11.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-12.png"></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-13.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-14.png"></div>
-                <div class="col-xs-4"><img class="symptomButton" src="app/style/images/sintomas/sintomas-15.png"></div>
-            </div>
-        </div>
-        <div class="form-group inputContainer">
-            <input class="form-control detail" id="inputdefault" type="text" placeholder="Details">
-        </div>
-        <div class="sliderContainer">
-            <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
-        </div>
-    </div>
-
-    <div id="submitSymptoms" class="reportButton">
-        Send my Symptoms
-    </div>
-</div>
-
-
-<script src="symptoms.js"></script>
 
 </body>
-
 </html>

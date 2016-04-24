@@ -7,7 +7,7 @@ $(".symptomButton").click(function() {
 });
 
 
-// SLIDER
+// SLIDER 
 $(document).bind("pagecreate", function(event, ui) {
     $('#slider').siblings('.ui-slider').bind('tap', function(event, ui) {
         makeAjaxChange($(this).siblings('input'));
@@ -19,4 +19,14 @@ $(document).bind("pagecreate", function(event, ui) {
     function makeAjaxChange(elem) {
         alert(elem.val());
     }
+});
+
+// save button
+$("#submitSymptoms").click(function() {
+    alert('changes submited');
+});
+
+// Back button
+$("#backButton").click(function() {
+    alert("Volve!!!");
 });
