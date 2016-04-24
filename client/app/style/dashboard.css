@@ -19,46 +19,133 @@
 #dashboard #header .user-bar {
     height: 40px;
     background: #000;
+    font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    color: white;
+    text-align: right;
 }
 
 #dashboard #header .user-bar .icon .img {
     height: 40px;
 }
 
-#dashboard #header .name {
+#dashboard #body .name {
     font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     text-align: right;
 }
 
-#dashboard #header .date {
+#dashboard #body .date {
     font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20pt;
     color: white;
 }
 
-#dashboard #header .location {
+#dashboard #body .location {
     font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50pt;
     color: blue;
 }
 
-#dashboard #header .last-update {
+#dashboard #body .last-update {
     font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20pt;
     color: white;
 }
 
+#dashboard #system-info {
+    height:125px;
+    margin-top: 50px;
+}
+
 #dashboard #system-info .parameters {
     text-align: center;
-    border-top: 2px black dashed;
+    /*border-top: 2px black dashed;*/
 }
 
 #dashboard #system-info .parameters .parameter{
-    border-right: 2px black dashed;
+    /*border-right: 2px black dashed;*/
 }
 
+#dashboard #system-info .parameters .parameter{
+    /*border-right: 2px black dashed;*/
+}
 
+/* ----------------------- CARD -----------------------*/
+#card{
+    margin-top:100px;
+}
+#card .card-header{
+    background: #bbdefa;
+    height:180px;
+}
+
+#card .card-header .info{
+    display: inline;
+}
+#card .card-header .card-icon{
+    display: inline;
+}
+
+#card .card-header .card-icon .img{
+    height:190px;
+}
+
+#card .card-header .info{
+    display: inline;
+    font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 60pt;
+    line-height: 2;
+    text-align: right;
+}
+
+#card .body{
+    background: #bbdefa;
+}
+
+#card .body .title{
+    font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #01c853;
+    font-size: 50pt;
+    padding: 15px;
+}
+
+#card .body .description{
+    font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5283c5;
+    font-size: 20pt;
+    padding: 15px;
+}
+
+#card .footer{
+    height: 50px;
+    background: white;
+}
+
+#card .footer >img{
+    height: 50px;
+}
+
+/* -------------------------- ALERTS -------------------- */
+#alerts{
+    margin-top: 100px;
+    background: #0D47A1;
+}
+
+#alerts .img {
+    width: 50px;
+    display: inline;
+}
+
+#alerts .info{
+    display: inline;
+    font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 15pt;
+    padding: 15px;
+    line-height: 2;
+}
 /*#dashboard #system-info .parameters .parameter .icon {*/
     /*!*background: white;*!*/
     /*border-right: 2px black dashed;*/
@@ -70,27 +157,25 @@
 
 /*}*/
 
-#dashboard #system-info .parameters .parameter .info .label {
+#dashboard #system-info .parameters .parameter .info .dashboard-label {
     display: inline;
     font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 25pt;
-    line-height: 2;
+    font-size: 20pt;
+    color: white;
 
 }
 
 #dashboard #system-info .parameters .parameter .info .value {
     display: inline;
     font-family: "sixcaps", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 2;
-    font-size: 25pt;
+    font-size: 20pt;
     font-weight: 500;
 
 }
 
 /* --------------------- BODY ----------------*/
 #dashboard #body {
-    margin-top: 50px;
-    padding: 30px;
+    padding: 0 30px 0 30px;
 }
 
 /* --------------------- FOOTER ----------------*/

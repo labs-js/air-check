@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+
+
     <title>Air Check</title>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
@@ -9,7 +10,10 @@
     <link rel="stylesheet" href="app/style/style.css">
     <link rel="stylesheet" href="app/style/dashboard.css">
 
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
 </head>
 <body>
@@ -18,58 +22,81 @@
         <div id="header">
             <div class="user-bar">
                 <div class="icon col-xs-6">
-                    <img class="img" src="app/style/images/dashboard/mockup1-07.png">
+                    <!--<img class="img" src="app/style/images/dashboard/mockup1-07.png">-->
                 </div>
-                <div class="name col-xs-6">Apolo</div>
+                <div class="name col-xs-6">User name</div>
             </div>
-            <div class="date header-data">Sunday 24 April</div>
-            <div class="location header-data">Palermo, Buenos Aires, ARG</div>
-            <div class="last-update header-data">Last update: 5 hours ago</div>
+            <!--<div class="date header-data">Sunday 24 April</div>-->
+            <!--<div class="location header-data">Palermo, Buenos Aires, ARG</div>-->
+            <!--<div class="last-update header-data">Last update: 2 hours ago</div>-->
         </div>
         <div id="body">
+            <div class="date header-data">Sunday 24 April</div>
+            <div class="location header-data">Palermo, Buenos Aires, ARG</div>
+            <div class="last-update header-data">Last update: 2 hours ago</div>
             <div id="system-info">
                 <div id="parameters" class="parameters">
                     <div id="air" class="col-xs-3 parameter">
                         <div class="icon">
-                            <img class="img" src="app/style/images/dashboard/mockup1-08.png">
+                            <img class="img-thumbnail" src="app/style/images/dashboard/mockup1-08.png">
                         </div>
                         <div class="info">
-                            <div class="label">Air</div>
+                            <div class="dashboard-label">Air</div>
                             <div class="value">+ 20 PPM</div>
                         </div>
                     </div>
                     <div id="humedity" class="col-xs-3 parameter">
                         <div class="icon">
-                            <img class="img" src="app/style/images/dashboard/mockup1-10.png">
+                            <img class="img-thumbnail" src="app/style/images/dashboard/mockup1-10.png">
                         </div>
                         <div class="info">
-                            <div class="label">Humedity</div>
+                            <div class="dashboard-label">Humedity</div>
                             <div class="value">30%</div>
                         </div>
                     </div>
                     <div id="polution" class="col-xs-3 parameter">
                         <div class="icon">
-                            <img class="img" src="app/style/images/dashboard/mockup1-11.png">
+                            <img class="img-thumbnail" src="app/style/images/dashboard/mockup1-11.png">
                         </div>
                         <div class="info">
-                            <div class="label">Polution</div>
+                            <div class="dashboard-label">Polution</div>
                             <div class="value">30%</div>
                         </div>
                     </div>
                     <div id="wind" class="col-xs-3 parameter">
                         <div class="icon">
-                            <img class="img" src="app/style/images/dashboard/mockup1-13.png">
+                            <img class="img-thumbnail" src="app/style/images/dashboard/mockup1-13.png">
                         </div>
                         <div class="info">
-                            <div class="label">Wind</div>
+                            <div class="dashboard-label">Wind</div>
                             <div class="value">30</div>
                         </div>
 
                     </div>
                 </div>
-                <div id="alerts"></div>
             </div>
-            <div id="community-info"></div>
+
+            <div id="card">
+                <div class="card-header">
+                    <div class="card-icon col-xs-6 ">
+                        <img clas="img" src="app/style/images/dashboard/zapatillav.png">
+                    </div>
+                    <div class="info col-xs-6 ">
+                        +20 PPM
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="title">AIR QUALITY</div>
+                    <div class="description">It's a great day to go out. There is no risk around</div>
+                </div>
+                <div class="footer">
+                    <img src="app/style/images/dashboard/mockup1-14.png">
+                </div>
+            </div>
+            <div id="alerts">
+                <img class="img" src="app/style/images/dashboard/mockup1-15.png">
+                <div class="info">5 reports nearby</div>
+            </div>
         </div>
         <div id="footer">
             <button class="report-symptoms">Report Symptoms</button>
