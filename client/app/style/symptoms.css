@@ -73,3 +73,8 @@
 .ui-slider-input {
     display: none!important;
 }
+
+.backRow {
+    padding-top: 30px;
+    padding-left: 30px;
+}
