@@ -8,11 +8,13 @@
     <script src="libs/bootstrap.min.js"></script>
     <script src="libs/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="libs/bootstrap.min.css">
 
+
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="app/style/dashboard.css">
     <link rel="stylesheet" href="app/style/style.css">
     <link rel="stylesheet" href="app/style/symptoms.css">
+    <link rel="stylesheet" href="app/style/jquery.mobile-1.4.5.css">
 
 </head>
 
@@ -30,6 +32,16 @@
         $('.go-map').click(goMap);
 
         $('#submitSymptoms').click(function () {
+            dashboard();
+        });
+
+        // save button
+        $("#submitSymptoms").click(function() {
+            dashboard();
+        });
+
+        // Back button
+        $("#backButton").click(function() {
             dashboard();
         });
 
@@ -174,6 +186,8 @@
     </div>
 </div>
 
+
+<script src="symptoms.js"></script>
 
 </body>
 
