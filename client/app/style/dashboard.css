@@ -132,6 +132,8 @@
 #alerts{
     margin-top: 100px;
     background: #0D47A1;
+    height: 90px;
+    padding-top: 20px;
 }
 
 #alerts .img {
@@ -197,4 +199,6 @@
     font-weight: 500;
     background: black;
     border:0;
+    margin-bottom: 35px;
+
 }
