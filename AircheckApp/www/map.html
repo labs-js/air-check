@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air Check</title>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="app/style/style.css">
+</head>
+<body>
+
+<div class="row col-md-offset-4" id="map">
+    <div id="googleMap" style="width:500px;height:380px;"></div>
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap"></script>
+<script>
+    // Note: This example requires that you consent to location sharing when
+    // prompted by your browser. If you see the error "The Geolocation service
+    // failed.", it means you probably did not give permission for the browser to
+    // locate you.
+    var markers = [];
+    var map;
+    var neighborhoods = [
+        {lat: 52.511, lng: 13.447},
+        {lat: 52.549, lng: 13.422},
+        {lat: 52.497, lng: 13.396},
+        {lat: 52.517, lng: 13.394}
+    ];
+
+    function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+        markers = [];
+    }
+
+    function drawPoints() {
+        clearMarkers();
+        for (var i = 0; i < neighborhoods.length; i++) {
+            addMarkerWithTimeout(neighborhoods[i], i * 200);
+        }
+    }
+
+    function addMarkerWithTimeout(position, timeout) {
+        window.setTimeout(function() {
+            markers.push(new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP
+            }));
+        }, timeout);
+    }
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 1
+        });
+
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+
+        var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true
+//            strokeColor: '#FF0000',
+//            strokeOpacity: 1.0,
+//            strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('You');
+                map.setCenter(pos);
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+    }
+    $(document).ready(function() {
+        drawPoints();
+    });
+</script>
+<!--<script async defer-->
+        <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap"></script>-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElvP6jZ7hZx5-DbKAa3Z2PJQ4G966HRo&signed_in=true&callback=initMap" async defer></script>-->
+</body>
+</html>
