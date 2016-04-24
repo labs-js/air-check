@@ -1,4 +1,11 @@
 dato de uso de servicios de BLuemix  
+
+https://console.ng.bluemix.net/catalog/services/insights-for-weather/
+
+https://console.ng.bluemix.net/catalog/services/alchemyapi/
+http://querybuilder.alchemyapi.com/builder
+
+https://console.ng.bluemix.net/catalog/services/insights-for-twitter/
 ------------------------------------
 AlchemyData News
 developers can perform tasks such as extracting the people, places, companies, and other entities mentioned in a news article or analyze an image to understand the contents of the photo.
