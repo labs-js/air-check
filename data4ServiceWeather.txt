@@ -1,6 +1,7 @@
 dato de uso de servicios de BLuemix  
-http://openweathermap.org/
-
+------------------------------------
+AlchemyData News
+developers can perform tasks such as extracting the people, places, companies, and other entities mentioned in a news article or analyze an image to understand the contents of the photo.
 
 {
    "alchemy_api": [
@@ -18,30 +19,33 @@ http://openweathermap.org/
 }
 
 
-https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&return=enriched.url.url&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&enriched.url.taxonomy.taxonomy_.label=asthma&count=25&outputMode=json
+// retorna cantidad
+https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&start=1460851200&end=1461538800&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=health%20and%20fitness&count=25&outputMode=json&timeSlice=1d
 
-https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=asthma&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=africa&count=25&outputMode=json&timeSlice=1d
+q.enriched.url.docSentiment.type={SENTIMIENTO**}
+{SENTIMIENTO**} = negative,positive,neutral
 
-
-https://access.alchemyapi.com/calls/data/GetNews?apikey=df23b20b98cfd0f36d48756ece3b9ece5fd97844&start=1460764800&end=1461452400&q.enriched.url.docSentiment.type=negative&q.enriched.url.taxonomy.taxonomy_.label=health%20and%20fitness&count=25&outputMode=json&timeSlice=1d
-
+q.enriched.url.taxonomy.taxonomy_.label={TAXONOMIA**}
+{TAXONOMIA**}=
 disease
-allergies
 asthma
 cancer
-cold and flu
+cold%20and%20flu
 epidemic
-headaches and migraines
-heart disease
-ibs and crohn´s disease
-incontinence
-infertility
-thyroid disease
-disorders
-panic and anxiety
-sleep disorders
+headaches%20and%20migraines
+heart%20disease
+ibs%20and%20crohns%20disease
+thyroid%20disease
+panic%20and%20anxiety
 exercise
+
+
+ATRIBUTO = result.count
 ----------------------------------------------
+
+weather - 
+
+Este servicio le permite integrar datos sobre el tiempo históricos y en tiempo real desde The Weather Company a la aplicación IBM Bluemix. Puede recuperar datos del tiempo correspondientes a un área especificada por una geolocalización. Los datos le permiten pronosticar, detectar y visualizar eventos de tiempo negativos que pueden influir en la toma de decisiones de la aplicación.
 
 {
   "credentials": {
@@ -69,34 +73,31 @@ forecasts.temp
 "temp" (temperatura), 
 "rh" Humedad relativa,
 "uv" 
-
-
 "uv_desc"
 "uv_index"
 ------------------------------------------
 
-
-
-units
-geocode
-language
-
+http://openweathermap.org/
 
 http://openweathermap.org/api_uv#uv_current
 
-f3768a12d28a660b9bd87afe5a73c0b5
-
+API KEY = f3768a12d28a660b9bd87afe5a73c0b5
+{location} = {0.0,0.0}  geodata
 
 http://api.owm.io/air/1.0/uvi/current?lat={lat}&lon={lon}
-
-http://api.openweathermap.org/pollution/v1/co/{location}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
-
-http://api.openweathermap.org/pollution/v1/o3/{0.0,0.0}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
-
-
 [UV.data.value, ]  [<6]
 
+http://api.openweathermap.org/pollution/v1/co/{location}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
 [CO.pressure]   [>0.00464 hPa] [<215 hPa ]
 
+http://api.openweathermap.org/pollution/v1/o3/{location}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
 [O3.data] [>100] [<500]
+
+
+
+
+
+
+
+
 
