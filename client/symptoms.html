@@ -6,9 +6,12 @@
     <title>Air Check</title>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="app/style/style.css">
     <link rel="stylesheet" href="app/style/symptoms.css">
+
 </head>
 
 <body>
@@ -34,12 +37,18 @@
             <div class="form-group inputContainer">
                 <input class="form-control detail" id="inputdefault" type="text" placeholder="Details">
             </div>
-            <div id="submitSymptoms" class="reportButton">
-                Reportar Sintomas
-            </div>
+        <div class="sliderContainer">
+            <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
+        </div>
+        </div>
+
+        <div id="submitSymptoms" class="reportButton">
+            Reportar Sintomas
         </div>
     </div>
+    </div>
     <script src="index.js"></script>
+    <script src="symptoms.js"></script>
 </body>
 
 </html>
