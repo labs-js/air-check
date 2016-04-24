@@ -1,8 +1,5 @@
 // Back button
-$("#map-backbutton").click(function() {
-    alert("Volve!!!");
-});
-// SLIDER 
+// SLIDER
 $(document).bind("pagecreate", function(event, ui) {
     $('#map-slider').siblings('.ui-slider').bind('tap', function(event, ui) {
         makeAjaxChange($(this).siblings('input'));
@@ -30,7 +27,7 @@ function initMap() {
         },
         zoom: 15
     });
-    var icon = "../client/app/style/images/mapa/report.png";
+    var icon = "app/style/images/mapa/report.png";
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(-34.583796, -58.434),
         title: "Reported Symptom!",

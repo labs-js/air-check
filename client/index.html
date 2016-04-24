@@ -30,8 +30,6 @@
 
         $('.report-symptoms').click(goSymptoms);
 
-        $('.go-map').click(goMap);
-
         $('#submitSymptoms').click(function () {
             dashboard();
         });
@@ -51,9 +49,9 @@
         });
 
         // Back button
-        $("#alerts").click(function() {
-            goMap();
-        });
+//        $("#alerts").click(function() {
+//            goMap();
+//        });
 
         function goSymptoms () {
             $('.container').hide();
@@ -153,8 +151,10 @@
                 </div>
             </div>
             <div id="alerts">
-                <img class="img" src="app/style/images/dashboard/mockup1-15.png">
-                <div class="info">5 reports nearby</div>
+                <a href="/map.html">
+                    <img class="img" src="app/style/images/dashboard/mockup1-15.png">
+                    <div class="info">5 reports nearby</div>
+                </a>
             </div>
         </div>
         <div id="footer">
