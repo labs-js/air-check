@@ -23,21 +23,6 @@
     margin-left: 30px;
     margin-right: 30px;
 }
-
-.reportButton {
-    height: 80px;
-    text-align: center;
-    font-size: 34px;
-    padding: 20px;
-    background-color: #0C46A0;
-    font-family: roboto;
-    color: #BADDFA;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    margin-bottom: 21px;
-}
-
 .detail {
     font-family: roboto;
     height: 70px;
