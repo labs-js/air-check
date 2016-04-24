@@ -75,6 +75,7 @@ forecasts.temp
 "uv" 
 "uv_desc"
 "uv_index"
+ptend_desc:
 ------------------------------------------
 
 http://openweathermap.org/
@@ -92,9 +93,45 @@ http://api.openweathermap.org/pollution/v1/co/{location}/current.json?appid=f376
 
 http://api.openweathermap.org/pollution/v1/o3/{location}/current.json?appid=f3768a12d28a660b9bd87afe5a73c0b5
 [O3.data] [>100] [<500]
+---------------------------
+in sights twitter
+https://cdeservice.mybluemix.net/rest-api/
+
+{
+   "twitterinsights": [
+      {
+         "name": "Insights for Twitter-dy",
+         "label": "twitterinsights",
+         "plan": "Free",
+         "credentials": {
+            "username": "8fd71bdb-f113-462f-bff5-d8009c85c4a5",
+            "password": "Fo7wChC1cM",
+            "host": "cdeservice.mybluemix.net",
+            "port": 443,
+            "url": "https://8fd71bdb-f113-462f-bff5-d8009c85c4a5:Fo7wChC1cM@cdeservice.mybluemix.net"
+         }
+      }
+   ]
+}
+
+https://8fd71bdb-f113-462f-bff5-d8009c85c4a5:Fo7wChC1cM@cdeservice.mybluemix.net:443/api/v1/messages/count?q={QUERY}
+
+{QUERY} =  A URL-encoded query string. Must conform to supported query operators and terms
 
 
 
+
+
+
+
+
+---------------------------
+
+http://climate.nasa.gov/vital-signs/carbon-dioxide/
+https://co2.jpl.nasa.gov/
+https://data.nasa.gov/developer
+
+The CO2 Virtual Data Environment API is designed to facilitate research on atmospheric CO2. This API gives users access to a host of datasets concerning atmospheric research including calculations, algorithms, data models, etc. In addition, users have access to tools to aid in the manipulation and transformation of atmospheric data.
 
 
 
